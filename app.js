@@ -84,7 +84,18 @@ app.put("/blogs/:id", function(req,res) {
 			res.redirect("/blogs/" + req.params.id);
 		}
 	});
-})
+});
+
+// Delete Route
+app.delete("/blogs/:id", function(req,res) {
+	Blog.findByIdAndRemove(req.params.id, function(err) {
+		if(err) {
+			res.redirect("/blogs");
+		} else {
+			res.redirect("/blogs");
+		}
+	});
+});
 
 
 

@@ -1,14 +1,16 @@
 <% include partials/header %>
-<h1>Index Page</h1>
+<div class="container">
+	<h1>Index Page</h1>
 
-<% blogs.forEach(function(blog) { %>
-	<div>
-		<h2><%= blog.title %></h2>
-		<img src="<%= blog.image %>">
-		<span><%= blog.created %></span>
-		<p><%= blog.body %>...</p>
-		<a href="/blogs/<%= blog._id %>">Read More</a>
-	</div>
+	<% blogs.forEach(function(blog) { %>
+		<div>
+			<h2><%= blog.title %></h2>
+			<img src="<%= blog.image %>">
+			<span><%= blog.created %></span>
+			<p><%= blog.body %>...</p>
+			<a href="/blogs/<%= blog._id %>">Read More</a>
+		</div>
+</div>
 
 <% }); %>
 
