@@ -9,3 +9,7 @@ i.icon {
 #delete {
 	display: inline;
 }
+
+.chevron {
+	margin-top: .1em;
+}
